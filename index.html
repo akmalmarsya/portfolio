@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Portofolio Akmal Rasya - Mahasiswa D4 Teknik Informatika PENS & Backend Developer. Berfokus pada Laravel, Python, Database MySQL & PostgreSQL, serta REST API.">
+  <meta name="author" content="Akmal Rasya">
+  <title>Akmal Rasya | Backend Developer</title>
+  
+  <!-- Anti-FOUC Theme Preloader -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="brand">
+        <span class="brand-icon">&gt;_</span>
+        <span>Akmal Rasya</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Beranda</a>
+        <a href="#about" class="nav-link">Tentang Saya</a>
+        <a href="#skills" class="nav-link">Keahlian</a>
+        <a href="#projects" class="nav-link">Proyek</a>
+        <a href="#education" class="nav-link">Pendidikan</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+        
+        <!-- Mobile Drawer CTA Button -->
+        <div class="mobile-cta-wrap" style="display: none;">
+          <a href="#contact" class="btn btn-primary mobile-cta-btn">Hubungi Saya</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Button (Dark / Light) -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Beralih Mode Tampilan" title="Beralih Mode Tampilan">
+          <!-- Sun Icon (Active in Light Mode) -->
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Active in Dark Mode) -->
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-secondary btn-sm">Hubungi Saya</a>
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Terbuka untuk Magang &amp; Junior Backend</span>
+          </div>
+
+          <span class="hero-greeting">Halo, perkenalkan saya</span>
+          <h1 class="hero-title">Akmal Rasya</h1>
+          
+          <div class="hero-headline">
+            <span>Backend Developer</span>
+            <span class="badge-dept">Mahasiswa D4 TI PENS</span>
+          </div>
+
+          <p class="hero-tagline">
+            Fokus membangun sistem backend yang terstruktur, pengelolaan database relasional, dan integrasi REST API yang siap pakai.
+          </p>
+
+          <p class="hero-bio">
+            Mahasiswa D4 Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS) angkatan 2025. Terbiasa mengerjakan alur backend menggunakan Laravel, PHP Native, dan Python dengan database MySQL serta PostgreSQL.
+          </p>
+
+          <!-- Quick Metrics Grid -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">5</span>
+              <span class="stat-label">Proyek Web &amp; API</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Bahasa (PHP/Py)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Sem. 3</span>
+              <span class="stat-label">D4 TI PENS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Fokus Backend</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <span>Lihat Proyek</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/akmalmarsya/" target="_blank" rel="noopener noreferrer" class="social-link" title="Kunjungi Profil GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://akmalrasya.it.student.pens.ac.id/" target="_blank" rel="noopener noreferrer" class="social-link" title="Student Page PENS">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+            <a href="mailto:akmalrasya234@gmail.com" class="social-link" title="Kirim Email Langsung">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Window Preview -->
+        <div class="hero-visual">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-left">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-tab">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <span>AkmalRasya.php</span>
+                </div>
+              </div>
+              <button class="btn-code-copy" id="copy-code-btn" title="Salin Kode Cuplikan">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Salin</span>
+              </button>
+            </div>
+            <div class="terminal-body">
+              <div class="code-line"><span class="code-keyword">&lt;?php</span></div>
+              <div class="code-line"><span class="code-keyword">namespace</span> Developer;</div>
+              <div class="code-line"></div>
+              <div class="code-line"><span class="code-keyword">class</span> <span class="code-var">AkmalRasya</span> {</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public string</span> <span class="code-prop">$role</span> = <span class="code-string">"Backend Developer"</span>;</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public string</span> <span class="code-prop">$campus</span> = <span class="code-string">"PENS Surabaya"</span>;</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public array</span> <span class="code-prop">$stack</span> = [<span class="code-string">"Laravel"</span>, <span class="code-string">"Python"</span>];</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public array</span> <span class="code-prop">$db</span> = [<span class="code-string">"MySQL"</span>, <span class="code-string">"PostgreSQL"</span>];</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public array</span> <span class="code-prop">$services</span> = [<span class="code-string">"RESTful API"</span>];</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-keyword">public bool</span> <span class="code-prop">$openToWork</span> = <span class="code-bool">true</span>;</div>
+              <div class="code-line">}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Tentang Saya</span>
+          </div>
+          <h2 class="section-title">Fokus pada Alur Logika &amp; Struktur Data</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text glass-card">
+            <p>
+              Ketertarikan saya di bidang software engineering bermula dari rasa penasaran tentang bagaimana sebuah sistem bekerja di balik layar. Mulai dari bagaimana skema database dimodelkan, bagaimana logika bisnis diproses, sampai bagaimana data dikirimkan lewat endpoint API secara aman. Saat ini, saya sedang menempuh studi D4 Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS) angkatan 2025 (saat ini semester 3).
+            </p>
+            <p>
+              Dalam mengerjakan proyek, saya terbiasa menggunakan PHP (Laravel dan PHP Native) serta Python. Untuk basis data, saya rutin memakai MySQL dan PostgreSQL. Saya suka menulis kode yang terstruktur, menjaga integritas relasi antar-tabel, dan memastikan API mudah dipakai oleh tim frontend atau mobile. Selain memperdalam backend, saya juga antusias mengeksplorasi integrasi AI ke dalam aplikasi web.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Mahasiswa Aktif PENS</h4>
+                <p>D4 Teknik Informatika (Angkatan 2025, Semester 3)</p>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Pengembangan Backend &amp; API</h4>
+                <p>Menangani routing, autentikasi, ORM, dan format JSON</p>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Database Relasional</h4>
+                <p>Perancangan skema tabel dan query di MySQL &amp; PostgreSQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Keahlian</span>
+          </div>
+          <h2 class="section-title">Teknologi yang Biasa Digunakan</h2>
+          <p class="section-subtitle">Bahasa pemrograman, framework, dan tools yang saya gunakan saat membangun proyek web dan sistem backend.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Bahasa Pemrograman</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">PHP</span>
+                  <span class="skill-badge">Bahasa Utama</span>
+                </div>
+                <p class="skill-desc">Dipakai untuk logika aplikasi web, arsitektur MVC di Laravel, dan script PHP Native.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-badge">Data &amp; Scripting</span>
+                </div>
+                <p class="skill-desc">Dipakai untuk backend service, pemrosesan data, dan scripting otomatisasi.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend Frameworks -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Backend Frameworks &amp; Web</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Laravel</span>
+                  <span class="skill-badge">Framework PHP</span>
+                </div>
+                <p class="skill-desc">Pemanfaatan pola MVC, routing, Eloquent ORM, middleware, dan pembuatan REST API.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">PHP Native</span>
+                  <span class="skill-badge">Fundamental</span>
+                </div>
+                <p class="skill-desc">Pemahaman dasar request-response HTTP, penanganan session, upload berkas, dan query langsung.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Database Systems -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Basis Data (Database)</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-badge">Relasional</span>
+                </div>
+                <p class="skill-desc">Perancangan skema relasional, normalisasi tabel, dan penerapan foreign key integrity.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-badge">Relasional</span>
+                </div>
+                <p class="skill-desc">Penyimpanan dan pengelolaan data terstruktur untuk kebutuhan service data backend.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: API Development -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Pengembangan API</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">RESTful API</span>
+                  <span class="skill-badge">Web Service</span>
+                </div>
+                <p class="skill-desc">Desain endpoint HTTP, format respon JSON, validasi input data, serta HTTP status code yang tepat.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Version Control -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Tools &amp; Version Control</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-badge">Version Control</span>
+                </div>
+                <p class="skill-desc">Tracking riwayat commit, pengelolaan branch, dan pengelolaan repository kode.</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name">Postman</span>
+                  <span class="skill-badge">API Testing</span>
+                </div>
+                <p class="skill-desc">Pengujian endpoint, simulasi header/body request, dan debugging respon API.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span>Portofolio</span>
+          </div>
+          <h2 class="section-title">Daftar Proyek</h2>
+          <p class="section-subtitle">Beberapa proyek backend dan aplikasi web yang pernah saya bangun selama perkuliahan dan latihan mandiri.</p>
+        </div>
+
+        <!-- Interactive Category Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Semua Proyek (5)</button>
+          <button class="filter-btn" data-filter="laravel">Laravel &amp; PHP</button>
+          <button class="filter-btn" data-filter="api">REST API</button>
+          <button class="filter-btn" data-filter="python">Python &amp; PostgreSQL</button>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROJECT 1: App Perpustakaan -->
+          <article class="project-card featured" data-category="laravel php">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="project-priority-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Proyek Unggulan #1
+                </span>
+                <h3 class="project-title">Aplikasi Manajemen Perpustakaan</h3>
+              </div>
+              <span class="project-category-tag">Aplikasi Web &amp; Database</span>
+            </div>
+
+            <p class="project-overview">
+              Aplikasi web untuk digitalisasi tata kelola sirkulasi buku perpustakaan secara terpadu, mulai dari pencatatan katalog buku, transaksi peminjaman mahasiswa, sampai riwayat pengembalian.
+            </p>
+
+            <div class="project-features">
+              <div class="features-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Fitur yang Dikembangkan</span>
+              </div>
+              <div class="features-list">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>CRUD data buku dan kategori dengan validasi input.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pencatatan alur transaksi peminjaman dan pengembalian buku.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Validasi ketersediaan data secara terstruktur dengan integritas data tabel.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-role-box">
+              <div class="role-box-label">Peran &amp; Fokus Saya:</div>
+              <p class="role-box-text">Backend Developer &mdash; Merancang struktur dan relasi basis data MySQL, menulis logika alur sirkulasi buku di Laravel, serta mengelola version control repository di GitHub.</p>
+            </div>
+
+            <div class="project-footer">
+              <div class="tech-badges">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Git</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/akmalmarsya/app-perpustakaan" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Buka Repository</span>
+                </a>
+                <span class="status-tag">[Belum dihosting]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: REST API Mobile -->
+          <article class="project-card" data-category="laravel php api">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="project-priority-badge">Prioritas #2</span>
+                <h3 class="project-title">REST API untuk Aplikasi Mobile</h3>
+              </div>
+              <span class="project-category-tag">API Service</span>
+            </div>
+
+            <p class="project-overview">
+              Penyediaan layanan backend berbasis RESTful API yang dirancang untuk melayani kebutuhan data pada aplikasi mobile secara konsisten, cepat, dan aman.
+            </p>
+
+            <div class="project-features">
+              <div class="features-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Fitur yang Dikembangkan</span>
+              </div>
+              <div class="features-list">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Endpoint autentikasi pengguna (alur login &amp; register).</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Endpoint CRUD resource data dengan respon terstruktur JSON.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Validasi request data masuk untuk mencegah input tidak valid.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-role-box">
+              <div class="role-box-label">Peran &amp; Fokus Saya:</div>
+              <p class="role-box-text">Backend Developer &mdash; Merancang seluruh endpoint API, mengimplementasikan validasi request data, dan melakukan pengujian respon endpoint lewat Postman.</p>
+            </div>
+
+            <div class="project-footer">
+              <div class="tech-badges">
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Postman</span>
+              </div>
+              <div class="project-links">
+                <span class="status-tag">GitHub: [Belum diisi]</span>
+                <span class="status-tag">[Belum dihosting]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Sistem Monitoring Data -->
+          <article class="project-card" data-category="python api postgresql">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="project-priority-badge">Prioritas #3</span>
+                <h3 class="project-title">Backend Service Sistem Monitoring Data</h3>
+              </div>
+              <span class="project-category-tag">Data Service &amp; Monitoring</span>
+            </div>
+
+            <p class="project-overview">
+              Layanan backend service yang bertugas menerima, memproses, menyimpan, dan menyediakan data pemantauan berkala melalui antarmuka API berbasis Python dan PostgreSQL.
+            </p>
+
+            <div class="project-features">
+              <div class="features-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Fitur yang Dikembangkan</span>
+              </div>
+              <div class="features-list">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Penerimaan aliran data pemantauan berkala via endpoint service.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Penyimpanan data terstruktur pada basis data PostgreSQL.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Penyediaan endpoint untuk mengambil ringkasan data hasil monitoring.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-role-box">
+              <div class="role-box-label">Peran &amp; Fokus Saya:</div>
+              <p class="role-box-text">Backend Developer &mdash; Merancang skema tabel relasional PostgreSQL serta menyusun alur pemrosesan data API menggunakan Python.</p>
+            </div>
+
+            <div class="project-footer">
+              <div class="tech-badges">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">REST API</span>
+              </div>
+              <div class="project-links">
+                <span class="status-tag">GitHub: [Belum diisi]</span>
+                <span class="status-tag">[Belum dihosting]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Sistem Informasi Inventaris -->
+          <article class="project-card" data-category="laravel php">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="project-priority-badge">Prioritas #4</span>
+                <h3 class="project-title">Sistem Informasi Inventaris Barang</h3>
+              </div>
+              <span class="project-category-tag">Manajemen Inventaris</span>
+            </div>
+
+            <p class="project-overview">
+              Aplikasi web internal untuk mencatat perputaran stok barang, pengelompokan kategori, dan riwayat transaksi barang masuk serta keluar secara konsisten.
+            </p>
+
+            <div class="project-features">
+              <div class="features-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Fitur yang Dikembangkan</span>
+              </div>
+              <div class="features-list">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pendataan barang, kategori, dan update stok secara konsisten.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pencatatan riwayat transaksi dengan kalkulasi sisa stok otomatis.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Autentikasi akun pengguna untuk keamanan akses ke sistem.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-role-box">
+              <div class="role-box-label">Peran &amp; Fokus Saya:</div>
+              <p class="role-box-text">Backend &amp; Database Developer &mdash; Membangun fitur autentikasi pengguna, merancang relasi antar tabel database MySQL (foreign key), dan menangani logika kalkulasi stok barang.</p>
+            </div>
+
+            <div class="project-footer">
+              <div class="tech-badges">
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+              </div>
+              <div class="project-links">
+                <span class="status-tag">GitHub: [Belum diisi]</span>
+                <span class="status-tag">[Belum dihosting]</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: KampusThrift -->
+          <article class="project-card" data-category="php">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="project-priority-badge">Prioritas #5</span>
+                <h3 class="project-title">KampusThrift &mdash; Marketplace Mahasiswa</h3>
+              </div>
+              <span class="project-category-tag">E-Commerce Web</span>
+            </div>
+
+            <p class="project-overview">
+              Platform web jual-beli barang bekas (*thrift*) khusus antarmahasiswa kampus untuk memfasilitasi transaksi yang aman dan terpusat di lingkungan perkuliahan.
+            </p>
+
+            <div class="project-features">
+              <div class="features-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Fitur yang Dikembangkan</span>
+              </div>
+              <div class="features-list">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Autentikasi akun pengguna berbasis sesi native (Register &amp; Login).</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Manajemen katalog produk (CRUD) beserta filter kategori dan pencarian.</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Upload berkas gambar ke direktori server dan dashboard profil.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-role-box">
+              <div class="role-box-label">Peran &amp; Fokus Saya:</div>
+              <p class="role-box-text">Backend &amp; Database Developer &mdash; Mengimplementasikan logika autentikasi sesi, mendesain skema database MySQL dari nol, menangani upload file gambar server-side, dan query data menggunakan PHP Native.</p>
+            </div>
+
+            <div class="project-footer">
+              <div class="tech-badges">
+                <span class="tech-pill">PHP Native</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">HTML/CSS/JS</span>
+              </div>
+              <div class="project-links">
+                <span class="status-tag">GitHub: [Belum diisi]</span>
+                <span class="status-tag">[Belum dihosting]</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Pendidikan</span>
+          </div>
+          <h2 class="section-title">Latar Belakang Pendidikan</h2>
+        </div>
+
+        <div class="education-container">
+          <div class="edu-card">
+            <div class="edu-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="edu-content">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-institution">Politeknik Elektronika Negeri Surabaya (PENS)</h3>
+                  <div class="edu-degree">D4 Teknik Informatika</div>
+                </div>
+                <span class="edu-period">2025 &ndash; Sekarang (Est. 2029)</span>
+              </div>
+              <p class="edu-desc">
+                Saat ini menempuh studi semester 3. Mendalami mata kuliah rekayasa perangkat lunak, struktur data dan algoritma, perancangan database relasional, pemrograman web backend, serta integrasi kecerdasan buatan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Kontak</span>
+          </div>
+          <h2 class="section-title">Mari Terhubung</h2>
+          <p class="section-subtitle">Saya terbuka untuk peluang magang (internship), proyek pengembangan backend, maupun diskusi teknis.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card glass-card">
+            <p class="contact-lead">
+              Jika Anda sedang mencari kandidat Backend Developer yang berkomitmen dalam membangun logika sistem andal, atau ingin berdiskusi seputar proyek software engineering, jangan ragu untuk menghubungi saya!
+            </p>
+
+            <div class="contact-status-box">
+              <span class="pulse-dot"></span>
+              <span>Status: Terbuka untuk Magang / Junior Backend Developer</span>
+            </div>
+
+            <div>
+              <a href="mailto:akmalrasya234@gmail.com" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Kirim Email Sekarang</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-channels">
+            <!-- Email Channel -->
+            <div class="channel-card">
+              <div class="channel-left">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="channel-label">Email</div>
+                  <div class="channel-val">akmalrasya234@gmail.com</div>
+                </div>
+              </div>
+              <button class="btn-copy" id="copy-email-btn" title="Salin email ke clipboard">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Salin</span>
+              </button>
+            </div>
+
+            <!-- GitHub Channel -->
+            <a href="https://github.com/akmalmarsya/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-left">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </div>
+                <div>
+                  <div class="channel-label">GitHub</div>
+                  <div class="channel-val">github.com/akmalmarsya</div>
+                </div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+
+            <!-- Student Profile Channel -->
+            <a href="https://akmalrasya.it.student.pens.ac.id/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-left">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <div>
+                  <div class="channel-label">Student Page PENS</div>
+                  <div class="channel-val">akmalrasya.it.student.pens.ac.id</div>
+                </div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2025 &ndash; 2026 <strong>Akmal Rasya</strong>. Portofolio Backend Developer.</p>
+      </div>
+      <a href="#home" class="back-to-top">
+        <span>Kembali ke Atas</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating Back-to-Top Button -->
+  <button class="floating-back-to-top" id="floating-top" aria-label="Scroll kembali ke atas" title="Kembali ke Atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Toast Notification Popup (Centered on Mobile) -->
+  <div class="toast-notification" id="toast" role="alert">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Notifikasi</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
