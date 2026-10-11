@@ -1610,8 +1610,15 @@ button {
 /* Tablets & Small Laptops (< 992px) */
 @media (max-width: 992px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr) mencegah terminal kode melebarkan kolom grid
+       sehingga halaman bisa digeser ke samping di HP */
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
+  }
+
+  .hero-content,
+  .hero-visual {
+    min-width: 0;
   }
 
   .hero-content {
@@ -1758,6 +1765,13 @@ button {
     padding: 36px 0;
   }
 
+  /* Harus setelah .section, kalau tidak padding-top hero tertimpa
+     dan badge "Terbuka untuk Magang" menabrak navbar di HP */
+  .hero {
+    padding-top: calc(var(--nav-height) + 20px);
+    padding-bottom: 40px;
+  }
+
   .status-pill {
     font-size: 0.76rem;
     padding: 5px 12px;
@@ -1793,7 +1807,7 @@ button {
 
   .code-line {
     padding-left: 24px;
-    font-size: clamp(0.68rem, 2.7vw, 0.76rem);
+    font-size: clamp(0.56rem, 2.75vw, 0.76rem); /* turun lebih jauh di HP kecil agar baris kode tidak terpotong */
     letter-spacing: -0.015em;
   }
 
