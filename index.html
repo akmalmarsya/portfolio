@@ -18,6 +18,7 @@
           document.documentElement.setAttribute('data-theme', 'dark');
         }
       } catch (e) {}
+      document.documentElement.classList.add('js');
     })();
   </script>
 
@@ -92,29 +93,29 @@
     <section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="status-pill">
+          <div class="status-pill hero-anim-pill">
             <span class="pulse-dot"></span>
             <span>Terbuka untuk Magang &amp; Junior Backend</span>
           </div>
 
-          <span class="hero-greeting">Halo, perkenalkan saya</span>
-          <h1 class="hero-title">Akmal Rasya</h1>
+          <span class="hero-greeting hero-anim-name">Halo, perkenalkan saya</span>
+          <h1 class="hero-title hero-anim-name">Akmal Rasya</h1>
           
-          <div class="hero-headline">
+          <div class="hero-headline hero-anim-role">
             <span>Backend Developer</span>
             <span class="badge-dept">Mahasiswa D4 TI PENS</span>
           </div>
 
-          <p class="hero-tagline">
+          <p class="hero-tagline hero-anim-desc">
             Fokus membangun sistem backend yang terstruktur, pengelolaan database relasional, dan integrasi REST API yang siap pakai.
           </p>
 
-          <p class="hero-bio">
+          <p class="hero-bio hero-anim-desc">
             Mahasiswa D4 Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS) angkatan 2025. Terbiasa mengerjakan alur backend menggunakan Laravel, PHP Native, dan Python dengan database MySQL serta PostgreSQL.
           </p>
 
           <!-- Quick Metrics Grid -->
-          <div class="hero-stats">
+          <div class="hero-stats hero-anim-stats">
             <div class="stat-item">
               <span class="stat-num">5</span>
               <span class="stat-label">Proyek Web &amp; API</span>
@@ -133,7 +134,7 @@
             </div>
           </div>
 
-          <div class="hero-actions">
+          <div class="hero-actions hero-anim-cta">
             <a href="#projects" class="btn btn-primary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               <span>Lihat Proyek</span>
@@ -144,7 +145,7 @@
             </a>
           </div>
 
-          <div class="hero-socials">
+          <div class="hero-socials hero-anim-social">
             <a href="https://github.com/akmalmarsya/" target="_blank" rel="noopener noreferrer" class="social-link" title="Kunjungi Profil GitHub">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             </a>
@@ -158,7 +159,7 @@
         </div>
 
         <!-- Terminal Window Preview -->
-        <div class="hero-visual">
+        <div class="hero-visual hero-anim-visual">
           <div class="terminal-window">
             <div class="terminal-header">
               <div class="terminal-left">
@@ -198,7 +199,7 @@
     <!-- ==================== ABOUT ME SECTION ==================== -->
     <section class="section" id="about">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <div class="section-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <span>Tentang Saya</span>
@@ -207,7 +208,7 @@
         </div>
 
         <div class="about-grid">
-          <div class="about-text glass-card">
+          <div class="about-text glass-card reveal reveal-left">
             <p>
               Ketertarikan saya di bidang software engineering bermula dari rasa penasaran tentang bagaimana sebuah sistem bekerja di balik layar. Mulai dari bagaimana skema database dimodelkan, bagaimana logika bisnis diproses, sampai bagaimana data dikirimkan lewat endpoint API secara aman. Saat ini, saya sedang menempuh studi D4 Teknik Informatika di Politeknik Elektronika Negeri Surabaya (PENS) angkatan 2025 (saat ini semester 3).
             </p>
@@ -217,7 +218,7 @@
           </div>
 
           <div class="about-highlights">
-            <div class="highlight-card">
+            <div class="highlight-card reveal reveal-right reveal-delay-1">
               <div class="highlight-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
               </div>
@@ -227,7 +228,7 @@
               </div>
             </div>
 
-            <div class="highlight-card">
+            <div class="highlight-card reveal reveal-right reveal-delay-2">
               <div class="highlight-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
               </div>
@@ -237,7 +238,7 @@
               </div>
             </div>
 
-            <div class="highlight-card">
+            <div class="highlight-card reveal reveal-right reveal-delay-3">
               <div class="highlight-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
               </div>
@@ -254,7 +255,7 @@
     <!-- ==================== SKILLS SECTION ==================== -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <div class="section-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <span>Keahlian</span>
@@ -265,7 +266,7 @@
 
         <div class="skills-grid">
           <!-- Category 1: Languages -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-delay-1">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
@@ -291,7 +292,7 @@
           </div>
 
           <!-- Category 2: Backend Frameworks -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-delay-2">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -317,7 +318,7 @@
           </div>
 
           <!-- Category 3: Database Systems -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-delay-3">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
@@ -343,7 +344,7 @@
           </div>
 
           <!-- Category 4: API Development -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-delay-4">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
@@ -362,7 +363,7 @@
           </div>
 
           <!-- Category 5: Tools & Version Control -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-delay-5">
             <div class="skill-cat-header">
               <div class="skill-cat-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
@@ -393,7 +394,7 @@
     <!-- ==================== PROJECTS SECTION ==================== -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <div class="section-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             <span>Portofolio</span>
@@ -403,7 +404,7 @@
         </div>
 
         <!-- Interactive Category Filters -->
-        <div class="project-filters">
+        <div class="project-filters reveal">
           <button class="filter-btn active" data-filter="all">Semua Proyek (5)</button>
           <button class="filter-btn" data-filter="laravel">Laravel &amp; PHP</button>
           <button class="filter-btn" data-filter="api">REST API</button>
@@ -413,7 +414,7 @@
         <div class="projects-list">
 
           <!-- PROJECT 1: App Perpustakaan -->
-          <article class="project-card featured" data-category="laravel php">
+          <article class="project-card reveal featured" data-category="laravel php">
             <div class="project-top">
               <div class="project-meta">
                 <span class="project-priority-badge">
@@ -473,7 +474,7 @@
           </article>
 
           <!-- PROJECT 2: REST API Mobile -->
-          <article class="project-card" data-category="laravel php api">
+          <article class="project-card reveal" data-category="laravel php api">
             <div class="project-top">
               <div class="project-meta">
                 <span class="project-priority-badge">Prioritas #2</span>
@@ -527,7 +528,7 @@
           </article>
 
           <!-- PROJECT 3: Sistem Monitoring Data -->
-          <article class="project-card" data-category="python api postgresql">
+          <article class="project-card reveal" data-category="python api postgresql">
             <div class="project-top">
               <div class="project-meta">
                 <span class="project-priority-badge">Prioritas #3</span>
@@ -580,7 +581,7 @@
           </article>
 
           <!-- PROJECT 4: Sistem Informasi Inventaris -->
-          <article class="project-card" data-category="laravel php">
+          <article class="project-card reveal" data-category="laravel php">
             <div class="project-top">
               <div class="project-meta">
                 <span class="project-priority-badge">Prioritas #4</span>
@@ -633,7 +634,7 @@
           </article>
 
           <!-- PROJECT 5: KampusThrift -->
-          <article class="project-card" data-category="php">
+          <article class="project-card reveal" data-category="php">
             <div class="project-top">
               <div class="project-meta">
                 <span class="project-priority-badge">Prioritas #5</span>
@@ -692,7 +693,7 @@
     <!-- ==================== EDUCATION SECTION ==================== -->
     <section class="section" id="education">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <div class="section-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             <span>Pendidikan</span>
@@ -701,7 +702,7 @@
         </div>
 
         <div class="education-container">
-          <div class="edu-card">
+          <div class="edu-card reveal reveal-scale">
             <div class="edu-icon-wrap">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
@@ -725,7 +726,7 @@
     <!-- ==================== CONTACT SECTION ==================== -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <div class="section-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span>Kontak</span>
@@ -735,7 +736,7 @@
         </div>
 
         <div class="contact-grid">
-          <div class="contact-info-card glass-card">
+          <div class="contact-info-card glass-card reveal reveal-left">
             <p class="contact-lead">
               Jika Anda sedang mencari kandidat Backend Developer yang berkomitmen dalam membangun logika sistem andal, atau ingin berdiskusi seputar proyek software engineering, jangan ragu untuk menghubungi saya!
             </p>
@@ -753,7 +754,7 @@
             </div>
           </div>
 
-          <div class="contact-channels">
+          <div class="contact-channels reveal reveal-right">
             <!-- Email Channel -->
             <div class="channel-card">
               <div class="channel-left">
@@ -805,7 +806,7 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="container footer-inner">
       <div>
         <p>&copy; 2025 &ndash; 2026 <strong>Akmal Rasya</strong>. Portofolio Backend Developer.</p>

@@ -499,12 +499,14 @@ button {
 /* --------------------------------------------------------------------------
    HERO SECTION & METRICS
    -------------------------------------------------------------------------- */
+/* ---- Hero: fill full viewport so About section is hidden on first load ---- */
 .hero {
-  min-height: auto;
+  min-height: 100vh; /* fallback */
+  min-height: 100svh;
   display: flex;
-  align-items: center;
-  padding-top: calc(var(--nav-height) + 16px);
-  padding-bottom: 36px;
+  align-items: flex-end; /* konten turun ke bawah, sisa tinggi layar jadi ruang di bawah navbar (bukan di bawah konten) */
+  padding-top: calc(var(--nav-height) + 24px);
+  padding-bottom: 72px;
   position: relative;
 }
 
@@ -551,6 +553,82 @@ button {
   0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
   70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* ==========================================================================
+   ANIMATION SYSTEM — Hero Load & Scroll Reveal
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Hero load animations (run on page open) --- */
+.hero-anim-pill   { animation: fadeInDown 0.5s ease both; animation-delay: 0.05s; }
+.hero-anim-name   { animation: fadeInUp  0.55s ease both; animation-delay: 0.15s; }
+.hero-anim-role   { animation: fadeInUp  0.55s ease both; animation-delay: 0.25s; }
+.hero-anim-desc   { animation: fadeInUp  0.55s ease both; animation-delay: 0.35s; }
+.hero-anim-stats  { animation: fadeInUp  0.55s ease both; animation-delay: 0.45s; }
+.hero-anim-cta    { animation: fadeInUp  0.5s  ease both; animation-delay: 0.55s; }
+.hero-anim-social { animation: fadeIn    0.5s  ease both; animation-delay: 0.65s; }
+.hero-anim-visual { animation: fadeInRight 0.65s cubic-bezier(0.16,1,0.3,1) both; animation-delay: 0.2s; }
+
+/* --- Scroll Reveal System --- */
+/* Uses keyframe animations (not transitions) so it never fights with the
+   hover transitions of cards. Content is only hidden when JS is running
+   (html.js), so the page still works if JS fails. */
+.js .reveal {
+  opacity: 0;
+}
+
+.js .reveal.revealed {
+  opacity: 1;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: var(--reveal-delay, 0s);
+}
+.js .reveal.reveal-left.revealed  { animation-name: fadeInLeft; }
+.js .reveal.reveal-right.revealed { animation-name: fadeInRight; }
+.js .reveal.reveal-scale.revealed { animation-name: scaleIn; }
+
+/* Staggered delay helpers */
+.reveal-delay-1 { --reveal-delay: 0.08s; }
+.reveal-delay-2 { --reveal-delay: 0.16s; }
+.reveal-delay-3 { --reveal-delay: 0.24s; }
+.reveal-delay-4 { --reveal-delay: 0.32s; }
+.reveal-delay-5 { --reveal-delay: 0.40s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .js .reveal.revealed { opacity: 1; animation: none; }
+  .hero-anim-pill, .hero-anim-name, .hero-anim-role, .hero-anim-desc,
+  .hero-anim-stats, .hero-anim-cta, .hero-anim-social, .hero-anim-visual { animation: none; }
 }
 
 .hero-greeting {
@@ -1639,8 +1717,9 @@ button {
 
   .hero {
     padding-top: calc(var(--nav-height) + 16px);
-    padding-bottom: 30px;
-    min-height: auto;
+    padding-bottom: 48px;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .hero-stats {

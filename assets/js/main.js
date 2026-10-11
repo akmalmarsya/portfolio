@@ -6,6 +6,7 @@
  * - Interactive Project Category Filter
  * - One-Click Copy Email (akmalrasya234@gmail.com) & Terminal Code Snippet with Toast
  * - Floating Back-to-Top Button
+ * - Scroll Reveal Animation (IntersectionObserver)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -274,5 +275,26 @@ class AkmalRasya {
     toastTimeout = setTimeout(() => {
       toast.classList.remove('show');
     }, 3000);
+  }
+
+  /* ----------------------------------------------------
+   * 9. Scroll Reveal Animation
+   * Setiap konten dianimasikan sekali saat pertama kali masuk layar.
+   * ---------------------------------------------------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    // Browser lama: tampilkan semua konten tanpa animasi
+    revealEls.forEach(el => el.classList.add('revealed'));
   }
 });
